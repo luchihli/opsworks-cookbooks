@@ -3,7 +3,9 @@ script "install_something" do
   user "root"
   cwd "/tmp"
   code <<-EOH
-    date > 1.txt
+
+    id > 1.txt
+    date >> 1.txt
     echo "Hello" >> 1.txt
   EOH
 end
