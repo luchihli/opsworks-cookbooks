@@ -8,14 +8,14 @@ script "install_rbenv" do
     echo "Hello" >> 1.txt
 
     git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
-    mkdir -p ~/.rbenv/plugins
+    mkdir -p /home/deploy/.rbenv/plugins
     cd !$
     git clone git://github.com/sstephenson/ruby-build.git
     git clone git://github.com/jamis/rbenv-gemset.git
     git clone git://github.com/dcarley/rbenv-sudo.git
 
-    echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc    
-    echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+    echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> /home/deploy/.bashrc    
+    echo 'eval "$(rbenv init -)"' >> /home/deploy/.bashrc
   EOH
 end
 
@@ -50,5 +50,4 @@ script "install_ruby_221" do
 
   EOH
 end
-
 
