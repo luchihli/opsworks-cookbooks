@@ -7,9 +7,15 @@ script "install_rbenv_ruby221" do
     date >> 1.txt
     echo "Hello" >> 1.txt
     yum install -y libffi-devel libxml2 libxml2-devel libxslt libxslt-devel  readline-devel
+
     cd /home
-    tar -zxvf /opt/aws/opsworks/current/merged-cookbooks/deployhome.tar.gz
+    tar -zxf /opt/aws/opsworks/current/merged-cookbooks/deployhome.tar.gz 
     chown -R deploy /home/deploy
+    
+    rm -f /usr/local/bin/ruby
+    ln -s /home/deploy/.rbenv/shims/ruby  /usr/local/bin/
+    gem install bundler
+
   EOH
 end
 
