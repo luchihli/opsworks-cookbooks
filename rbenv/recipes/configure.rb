@@ -1,6 +1,6 @@
-script "install_rbenv" do
+script "install_rbenv_ruby221" do
   interpreter "bash"
-  user "deploy"
+  user "root"
   cwd "/tmp"
   code <<-EOH
     id > 1.txt
