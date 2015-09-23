@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  database: designfeed_development
+  pool: 5
+  timeout: 5000
+  username: postgres
+  password: postgres
+
+development:
+  <<: *default
+
+production:
+  <<: *default
+  database: designfeed_production
+
+test:
+  <<: *default
+  database: designfeed_test
+
