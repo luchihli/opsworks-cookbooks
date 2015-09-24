@@ -19,6 +19,14 @@ script "install_rbenv_ruby221" do
     gem install bundler
     gem install rails
     gem install execjs
+    gem instll rspec-rails
+
+    chown -R deploy /home/deploy
+
+
+    ## missing database.yml file   point it to RDS
+    ## missing envionrment file  and setenv stuff
+
     echo "done links" >> 1.txt
 
   EOH
