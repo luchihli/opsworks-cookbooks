@@ -4,8 +4,8 @@ script "df-deploy" do
   cwd "/tmp"
   code <<-EOH
     echo "#-#-#-#-#-# luchihli Deploy"
-    id > 1.txt
-    env > 1.txt
+    id > deploy.txt
+    env > deloy.txt
 
     #cd /home
     #tar -zxf /opt/aws/opsworks/current/merged-cookbooks/deployhome.tar.gz 

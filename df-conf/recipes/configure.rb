@@ -4,8 +4,8 @@ script "df-configure" do
   cwd "/tmp"
   code <<-EOH
     echo "#-#-#-#-#-# luchihli Configure"
-    id > 1.txt
-    env > 1.txt
+    id > configure.txt
+    env > configure.txt
 
     #cd /home
     #tar -zxf /opt/aws/opsworks/current/merged-cookbooks/deployhome.tar.gz 
