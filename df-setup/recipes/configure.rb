@@ -7,7 +7,7 @@ script "df-setup" do
     id > setup.txt
     env > setup.txt
 
-    gem install stripe --install-dir /home/deploy/.gem/ruby/2.2.0
+    gem install stripe --install-dir /home/deploy/.bundler/df_app 
 
 
     #cd /home
