@@ -4,8 +4,11 @@ script "df-setup" do
   cwd "/tmp"
   code <<-EOH
     echo "#-#-#-#-#-# luchihli Setup"
-    id > 1.txt
-    env > 1.txt
+    id > setup.txt
+    env > setup.txt
+
+    gem install stripe --install-dir /home/deploy/.gem/ruby/2.2.0
+
 
     #cd /home
     #tar -zxf /opt/aws/opsworks/current/merged-cookbooks/deployhome.tar.gz 
