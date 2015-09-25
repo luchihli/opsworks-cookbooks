@@ -8,9 +8,10 @@ script "df-setup" do
     env > setup.txt
    
     chown -R deploy  /usr/local/lib/ruby/gems/2.2.0
-
-#    gem install stripe -v '1.27.1'  --source https://github.com/stripe/stripe-ruby --install-dir /home/deploy/.bundler/df_app
     
+    gem install stripe --source https://github.com/stripe/stripe-ruby --install-dir /home/deploy/.bundler/df_app 
+
+    chown -R deploy /home/deploy/.bundler/df_app
 
     #cd /home
     #tar -zxf /opt/aws/opsworks/current/merged-cookbooks/deployhome.tar.gz 
